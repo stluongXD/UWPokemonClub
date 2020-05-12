@@ -1,0 +1,19 @@
+img {
+    max-height: 100px;
+}
+
+.card {
+    border: none;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow: 5px 5px 36px -5px rgba(0,0,0,0.79);
+}
+
+.card-body:hover {
+    background-color: #CBD6EA;
+    border-radius: 20px;
+}
+
+.half-page {
+    max-height: 70%;
+}

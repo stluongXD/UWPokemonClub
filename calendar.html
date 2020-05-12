@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Steven Luong and Damita Gomez">
+    <meta name="description" content="calendar page of events for the UW Pokemon Club">
+    <meta name="keywords" content="pokemon, club, calendar, events">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <title>Club Calendar</title>
+</head>
+
+<body class="main-content">
+    <header>
+        <nav>
+            <!-- The code for the dropdown menu came from here: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+            <div class="dropdown">
+                <button class="menu" aria-label="menu button">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#announcement">Annoucement</a>
+                    <a href="calendar.html">Calendar</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <span aria-label="UW Pokemon Club Logo of a masterball" class="logo"></span>
+            <!-- Logo in nav bar, not sure how to make bigger-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#announcement">Annoucement</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1 class="purple-text">Club Calendar</h1>
+        <iframe src="https://calendar.google.com/calendar/embed?src=pkmntrainerclub%40uw.edu&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </main>
+    <footer>
+        <div id="links">
+            <a href="https://www.instagram.com/uwpkmn/"><i class="fab fa-instagram fa-2x"
+                    aria-label="instagram"></i></a>
+            <a href="https://discord.gg/ha3T2K6"><i class="fab fa-discord fa-2x" aria-label="discord"></i></a>
+            <a href="mailto:pkmntrainerclub@uw.edu"><i class="fas fa-envelope-square fa-2x"
+                    aria-label="email"></i></i></a>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.js"></script>
+    <script src="js/calendar.js" type="text/JavaScript"></script>
+</body>
+
+</html>

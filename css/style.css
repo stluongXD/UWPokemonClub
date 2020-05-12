@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Public+Sans:800&display=swap');
+body {
+    font-size: 20px;
+    background-color: #E4F1FE;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+nav, .main-content {
+    display: flex;
+    align-items: center;
+}
+
+.main-content {
+    flex-direction: column;
+}
+
+footer {
+    margin: 3rem;
+}
+
+header, .main-content {
+    width: 100%;
+}
+
+header {
+    margin-bottom: 3rem;
+}
+
+nav {
+    height: 4rem;
+    padding-left: 1.75rem;
+}
+
+nav, .menu, .dropdown-content {
+    background-color: #c36588;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.purple-text {
+    color: #5F51A6;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+
+.purple-text, .resources {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Public Sans', sans-serif;
+}
+
+h2 {
+    color: #B43F6B;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+h2, p {
+    text-align: left;
+}
+
+.text {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+
+img {
+    max-height: 300px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: white;
+}
+
+.menu {
+    margin-left: 1rem;
+    font-size: 25px;
+    border: none;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    min-width: auto;
+    padding: 16px;
+}
+
+.dropdown-content, nav ul {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav ul {
+    padding-top: 1rem;
+}
+
+.info {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo {
+    background-image: url('../imgs/logo.png');
+    padding: 0 1em;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: none;
+    height: 3rem;
+}
+
+#spinning-masterball {
+    max-height: 300px;
+    width: auto;
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation { /* got code for rotation from: https://flaviocopes.com/rotate-image/ */
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 75px;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+    }
+}

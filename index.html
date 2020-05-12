@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Steven Luong and Damita Gomez">
+    <meta name="description" content="main page for the UW Pokemon Club web page">
+    <meta name="keywords" content="pokemon, club, about, announcements">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Main Page</title>
+</head>
+
+<body class="main-content">
+    <header>
+        <nav>
+            <!-- The code for the dropdown menu came from here: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+            <div class="dropdown">
+                <button class="menu" aria-label="menu button">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#announcement">Announcements</a>
+                    <a href="calendar.html">Calendar</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <span class="logo" aria-label="UW Pokemon Club Logo of a masterball"></span>
+            <!-- Logo in nav bar, not sure how to make bigger. Wanted to make this a link but may be redundant to home link-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#announcement">Announcements</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <h1 class="purple-text">UW Pok&eacute;mon Club Website</h1>
+        <img src="imgs/logo.png" alt="UW Pokemon Club Logo of a masterball" id="spinning-masterball">
+        <section class="main-content">
+            <p class="info purple-text">Meetings Held Every Wednesday in Dempsey 024 at 6PM!</p>
+            <h2 id="about">Who We Are</h2>
+            <p class="text">The Pokemon Club at UW is a club created by Pokemon fans at the University of Washington.
+                Our goal as a club is to create
+                a welcoming space for all Pokemon fans to enjoy the various mediums of Pokemon. We welcome all students
+                of various
+                familiarity of Pokemon such as Pokemon Go players, Trading Card Game Players, anime only watchers, or
+                even students who
+                just want to learn more about Pokemon. Our events include, Pokemon battle tournaments, trivia games,
+                watch parties and more!
+            </p>
+        </section>
+        <section class="main-content">
+            <h2 id="announcement">Announcements</h2>
+            <ul class="text">
+                <li>Pokemon Sword and Shield Tournament
+                    <ul>
+                        We are planning to have a Pokemon Tournament for the end of the quarter. However, we have
+                        not decided on the rules or formats yet. If you are interested in being part of the committee
+                        to help us plan out the events then let one of the officers know at the next meeting or email
+                        us at <a href="mailto:pkmntrainerclub@uw.edu">pkmntrainerclub@uw.edu</a>
+                    </ul>
+                </li>
+                <li>Pokemon Movie Watch Party
+                    <ul>
+                        We also would like to host a movie watch party and would like feedback for what movie to
+                        show. The date is still TBD but the officers will hand make some Pokemon themed snacks for
+                        everyone.
+                        If you have any snack allergies then let the officers know ASAP.
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section class="pokemon-of-day main-content">
+            <!--filled in with javascript-->
+            <h2>Pokemon of the Day</h2>
+        </section>
+    </main>
+    <footer>
+        <div id="links">
+            <a href="https://www.instagram.com/uwpkmn/"><i class="fab fa-instagram fa-2x"
+                    aria-label="instagram"></i></a>
+            <a href="https://discord.gg/ha3T2K6"><i class="fab fa-discord fa-2x" aria-label="discord"></i></a>
+            <a href="mailto:pkmntrainerclub@uw.edu"><i class="fas fa-envelope-square fa-2x"
+                    aria-label="email"></i></i></a>
+        </div>
+    </footer>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/index.js" type="text/JavaScript"></script>
+</body>
+
+</html>

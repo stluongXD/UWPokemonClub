@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Steven Luong and Damita Gomez">
+    <meta name="description" content="form page members to schedule events for the UW Pokemon Club and add to calendar">
+    <meta name="keywords" content="pokemon, club, calendar, form, events">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-style.css">
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <title>Event Form</title>
+</head>
+
+<body class="main-content">
+    <header>
+        <nav>
+            <!-- The code for the dropdown menu came from here: https://www.w3schools.com/howto/howto_css_dropdown.asp -->
+            <div class="dropdown">
+                <button class="menu" aria-label="menu button">&#9776;</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#announcement">Annoucement</a>
+                    <a href="calendar.html">Calendar</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+            </div>
+            <span aria-label="UW Pokemon Club Logo of a masterball" class="logo"></span>
+            <!-- Logo in nav bar, not sure how to make bigger-->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#announcement">Annoucement</a></li>
+                <li><a href="calendar.html">Calendar</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Suggest an Event for the Club</h2>
+        <form>
+            <fieldset>
+                <legend>About You</legend>
+                <p>
+                    First Name:
+                    <input type="text">
+                </p>
+                <p>
+                    Last Name:
+                    <input type="text">
+                </p>
+                <p>
+                    Email Address:
+                    <input type="text">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>About Event</legend>
+                <p>
+                    Event Name:
+                    <input type="text">
+                </p>
+                <p>
+                    Date of Event:
+                    <input type="date" id="start" name="trip-start" value="2020-01-01" min="2020-01-01"
+                        max="2025-12-31">
+                </p>
+                <p>
+                    Event Description:
+                    <textarea rows="3" class="form-control"></textarea>
+                </p>
+            </fieldset>
+        </form>
+        <div class="button">
+            <button>Submit</button>
+        </div>
+
+    </main>
+</body>
+
+</html>
