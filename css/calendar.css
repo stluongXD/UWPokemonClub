@@ -160,53 +160,31 @@ form, .submit {
     margin-top: 3rem;
 }
 
-@media (min-width: 425px) {
-    .month-name {
+.agenda-cal {
+    width: 90%;
+}
+
+.full-cal {
+    display: none;
+}
+
+@media (min-width: 5425px) {
+    .cal {
+        width: 5000;
+    }
+}
+
+@media (min-width: 500px) {
+    .agenda-cal {
+        display: none;
+    }
+
+    .full-cal {
         display: inline-block;
-    }
-}
-
-@media (min-width: 600px) {
-    .month-pokemon {
-        width: 50px;
-    }
-}
-
-@media (min-width: 680px) {
-    .weekdays li {
-        font-size: 20px;
-    }
-
-    .num-days li {
-        padding: 2rem;
-    }
-
-    .month ul li, .change-month {
-        font-size: 20px;
-    }
-
-    .month-name {
-        display: list-item;
-    }
-
-    .show-event {
-        padding: 1.9rem;
+        width: 90%;
     }
 }
 
 
-@media (min-width: 823px) {
-    .weekdays {
-        display: inline-block;
-    }
-
-    .weekdays li {
-        width: 13.6%;
-    }
-
-    .month-pokemon {
-        width: 100px;
-    }
-}
 
 

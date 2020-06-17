@@ -1,16 +1,25 @@
 'use strict';
 
+let startDate = new Date(2020, 0, 1, 0, 0, 0, 0); // January 1st 2020 will be the start date
+let today = new Date();
+const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+let diffDays = (Math.round(Math.abs((today - startDate) / oneDay)) % 807) + 1;
+let section = document.querySelector(".pokemon-of-day");
+
+getPokemon(diffDays, section);
+
 // adds pokemon to the specified section
 function getPokemon(pokedexNum, containerDiv) {
     let url = "https://pokeapi.co/api/v2/pokemon" + "/" + pokedexNum;
     fetch(url).then(response => response.json()).then(function(pokemon) {
-        let name = $("<p>");
+        let name = document.createElement("p");
         let lowerCase = pokemon.species.name;
-        name.text((lowerCase.charAt(0)).toUpperCase() + lowerCase.substring(1));
-        name.addClass("text");
+        name.textContent = (lowerCase.charAt(0)).toUpperCase() + lowerCase.substring(1);
+        name.classList.add("text");
         let dexNum = pokemon.id;
-        createPokeImage(dexNum, containerDiv, name.text());
-        containerDiv.append(name);
+
+        createPokeImage(dexNum, containerDiv, name.textContent);
+        containerDiv.appendChild(name);
         getDexEntry(pokemon.species.url, containerDiv)
     });
 }
@@ -18,14 +27,15 @@ function getPokemon(pokedexNum, containerDiv) {
 // gets background information about pokemon
 function getDexEntry(pokemonURL, containerDiv) {
     fetch(pokemonURL).then(response => response.json()).then(function(pokemon) {
-        let genera = $("<p>");
-        genera.text((getEnglishEntry(pokemon.genera)).genus);
-        genera.addClass("text");
-        containerDiv.append(genera);
-        let entry = $("<p>");
-        entry.text((getEnglishEntry(pokemon.flavor_text_entries)).flavor_text);
-        entry.addClass("text");
-        containerDiv.append(entry);
+        let genera = document.createElement("p");
+        genera.textContent = (getEnglishEntry(pokemon.genera)).genus;
+        genera.classList.add("text");
+        containerDiv.appendChild(genera);
+
+        let entry = document.createElement("p");
+        entry.textContent = (getEnglishEntry(pokemon.flavor_text_entries)).flavor_text;
+        entry.classList.add("text");
+        containerDiv.appendChild(entry);
     });
 }
 
@@ -40,16 +50,9 @@ function getEnglishEntry(pokemonArr) {
 
 // gets image of Pokemon
 function createPokeImage(pokeID, containerDiv, name){
-    let pokeImage = $("<img>")
-    pokeImage.attr({"alt":name, "srcset":`https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`});
-    pokeImage.css("display", "block");
-    containerDiv.append(pokeImage);
+    let pokeImage = document.createElement('img')
+    pokeImage.srcset = `https://pokeres.bastionbot.org/images/pokemon/${pokeID}.png`
+    pokeImage.alt = name;
+    pokeImage.style.float = "center";
+    containerDiv.appendChild(pokeImage);
   }
-
-let startDate = new Date(2020, 0, 1, 0, 0, 0, 0); // January 1st 2020 will be the start date
-let today = new Date();
-const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-let diffDays = (Math.round(Math.abs((today - startDate) / oneDay)) % 807) + 1;
-let section = $(".pokemon-of-day");
-
-getPokemon(diffDays, section);
